@@ -1,0 +1,73 @@
+@import "globals";
+@import "colors";
+@import "functions";
+
+body {
+    background-color: rgb(192, 189, 189);
+    max-width: unset;
+    margin: unset;
+}
+
+#navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 10px;
+    #navItems {
+        display: none;
+    }
+    #navItems li {
+        list-style-type: none;
+    }
+    #menuIcon div {
+        background-color: white;
+        width: 20px;
+        height: 2px;
+        margin: 6px 0;
+    }
+    a {
+        text-decoration: none;
+        color: $text;
+        font-weight: 700
+    }
+    button {
+        @include button();
+        background-color: $button;
+        font-weight: 700;
+    }
+}
+#welcomePage {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    span {
+        font-weight: 700;
+        color: red;
+    }
+}
+#navbar {
+    #menuIcon {
+        display: block;
+    }
+}
+
+@media (min-width: 520px) {
+    body {
+        max-width: 80%;
+        margin: auto;
+    }
+    #navbar {
+        #navItems {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            column-gap: 20px;
+        }
+        #menuIcon {
+            display: none;
+        }
+    }
+}
