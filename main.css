@@ -10,7 +10,7 @@ body {
 }
 
 #homepage {
-  background-image: url(arnold-francisca-f77Bh3inUpE-unsplash.jpg);
+  background-image: url(images/mobile.jpg);
   background-position: center;
   background-size: cover;
   position: relative;
@@ -167,6 +167,9 @@ body {
   body {
     max-width: 80%;
     margin: auto;
+  }
+  #homepage {
+    background-image: url(images/Desktop.jpg);
   }
   #navbar #navItems {
     display: -webkit-box;
